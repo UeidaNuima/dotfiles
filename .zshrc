@@ -88,7 +88,7 @@ antigen apply
 
 
 # pnpm
-# export PNPM_HOME="/Users/bytedance/Library/pnpm"
+# export PNPM_HOME="~/Library/pnpm"
 # export PYTHON_HOME="$(brew --prefix python)/libexec/bin"
 # export PATH="$PYTHON_HOME:$PNPM_HOME:$PATH"
 # pnpm end
@@ -121,16 +121,6 @@ git-open-link() {
 
 alias gol=git-open-link
 
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-##### WHAT YOU WANT TO DISABLE FOR WARP - BELOW
-
-  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
-fi
-
-export PATH=/Users/bytedance/hdd:$PATH
-
 [ -f "$HOME/.bytebm/config/config.sh" ] && . "$HOME/.bytebm/config/config.sh"
 
 # golang
@@ -147,7 +137,6 @@ export CLICOLOR=1
 
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
-export PATH=/Users/bytedance/.local/bin:$PATH
 
 # vim
 alias vim=nvim
@@ -161,7 +150,7 @@ export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 # mise
 eval "$(mise activate zsh)"
 
-export PATH="/Users/bytedance/.local/bin:$PATH"
+export PATH="~/.local/bin:$PATH"
 
 # zprof
 zprof
