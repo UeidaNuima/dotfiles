@@ -35,15 +35,15 @@ zinit wait lucid for \
     atload"unalias grv" \
     OMZP::git
 
-zinit wait'!' lucid for \
-    OMZL::prompt_info_functions.zsh \
-    https://github.com/UeidaNuima/dotfiles/blob/master/zsh-themes/robbyrussell.zsh-theme
-# zinit light UeidaNuima/dotfiles
-
 zinit wait lucid for \
     atinit"zicompinit; zicdreplay"  \
     zdharma-continuum/fast-syntax-highlighting \
     OMZP::colored-man-pages
+
+zinit snippet OMZL::async_prompt.zsh
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet https://github.com/UeidaNuima/dotfiles/blob/master/zsh-themes/robbyrussell.zsh-theme
 
 zinit light zdharma-continuum/fast-syntax-highlighting
 
