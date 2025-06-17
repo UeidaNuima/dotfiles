@@ -92,5 +92,8 @@ alias vim=nvim
 # mise
 eval "$(mise activate zsh)"
 
+# Load .zshrc.custom if it exists
+[ -f ~/.zshrc.custom ] && source ~/.zshrc.custom
+
 # zprof
 # zprof
