@@ -48,6 +48,10 @@ zinit snippet https://github.com/UeidaNuima/dotfiles/blob/master/zsh-themes/robb
 zinit light zdharma-continuum/fast-syntax-highlighting
 
 # fzf
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+## enable fzf shell integration
 source <(fzf --zsh)
 
 # git alias

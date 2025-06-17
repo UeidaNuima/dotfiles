@@ -19,16 +19,12 @@ Ensure homebrew env is injected in .zprofile or other config files loaded before
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
-### 3. zinit
-
-```bash
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-```
-
-### 4. other tools
+### 3. other tools
 
 ```
 brew install neovim
 brew install mise
 brew install fzf
+brew install ripgrep
+brew install fd
 ```
