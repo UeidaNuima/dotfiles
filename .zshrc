@@ -66,15 +66,19 @@ gmm() {
 }
 
 git-get-link() {
+    # Get the git remote origin URL
     remote_url=$(git remote get-url origin)
 
-    # Extract the domain, path (user/repo), and strip the .git suffix
-    # Assumes format: git@<domain>:<path>.git
-    domain=$(echo "$remote_url" | sed -E 's|git@([^:]+):.*|\1|')
-    path=$(echo "$remote_url" | sed -E 's|git@[^:]+:([^\.]+)(\.git)?|\1|')
+    # Remove 'git@' prefix and split into domain and path using ':' as delimiter
+    url_without_prefix=${remote_url#git@}
+    domain=${url_without_prefix%%:*}
+    path_with_git=${url_without_prefix#*:}
 
-    # Output in https format
-    echo "https://$domain/$path"
+    # Remove the trailing .git if it exists
+    git_path=${path_with_git%.git}
+
+    # Output the final https URL
+    echo "https://$domain/$git_path"
 }
 
 
@@ -83,6 +87,7 @@ git-open-link() {
 }
 
 alias gol=git-open-link
+alias ggl=git-get-link
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2 
 export CLICOLOR=1
