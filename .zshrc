@@ -47,6 +47,8 @@ zinit snippet https://github.com/UeidaNuima/dotfiles/blob/master/zsh-themes/robb
 
 zinit light zdharma-continuum/fast-syntax-highlighting
 
+zinit light jeffreytse/zsh-vi-mode
+
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type file --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
